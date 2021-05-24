@@ -1,0 +1,51 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{ .Title }}</title>
+	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+	{{ $reset := resources.Get "css/vendor/reset.css" }}
+	<link rel="stylesheet" href="{{ $reset.Permalink }}">
+	{{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}">
+
+	{{ $utils_js := resources.Get "js/modules/utils.js" }}
+	<link type="modulepreload" href="{{ $utils_js.Permalink }}">
+
+	{{ if eq .Layout "single"}} 
+		{{ $reading_progress_js := resources.Get "js/modules/reading-progress.js" }}
+		{{ $toggle_seconary_content_js := resources.Get "js/modules/toggle-secondary-content.js" }}
+		{{ $sidebar_js := resources.Get "js/modules/sidebar.js" }}
+		{{ $super_lazy_loading_js := resources.Get "js/modules/super-lazy-loading.js" }}
+		{{ $super_lazy_retro_loading_js := resources.Get "js/modules/super-lazy-retro-loading.js" }}
+		{{ $manage_content_folders_js := resources.Get "js/modules/manage-content-folders.js" }}
+		{{ $main_js := resources.Get "js/main.js" }}
+
+		<link type="modulepreload" href="{{ $reading_progress_js.Permalink }}">
+		<link type="modulepreload" href="{{ $sidebar_js.Permalink }}">	
+		<link type="modulepreload" href="{{ $toggle_seconary_content_js.Permalink }}">
+		<link type="modulepreload" href="{{ $super_lazy_loading_js.Permalink }}">
+		<link type="modulepreload" href="{{ $super_lazy_retro_loading_js.Permalink }}">
+	
+		<link type="modulepreload" href="{{ $manage_content_folders_js.Permalink }}">	
+		<script type="module" src="{{ $main_js.Permalink }}"></script>
+	{{ end }}
+
+	{{ if eq .Layout "home"}} 
+		{{ $fontObserver_lib_js := resources.Get "js/libs/fontobserver.js" }}
+		{{ $obfuscator_js := resources.Get "js/modules/obfuscator.js" }}
+		{{ $image_obfuscator_js := resources.Get "js/modules/image-obfuscator.js" }}
+		{{ $home_main_js := resources.Get "js/home-main.js" }}
+		<link type="modulepreload" href="{{ $obfuscator_js.Permalink }}">
+		<link type="modulepreload" href="{{ $image_obfuscator_js.Permalink }}">
+		<script src="{{ $fontObserver_lib_js.Permalink }}"></script>
+
+		<script type="module" src="{{ $home_main_js.Permalink }}"></script>
+
+	{{ end }}
+
+
+
+</head>

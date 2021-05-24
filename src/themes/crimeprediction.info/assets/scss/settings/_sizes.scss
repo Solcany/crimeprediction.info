@@ -1,0 +1,32 @@
+/* ~ 
+
+offsets
+
+~ */
+
+$offset-0: 0.25em;
+$offset-1: 0.5em;
+$offset-2: 1em;
+$offset-3: 2em;
+$offset-4: 4em;
+$offset-5: 6em;
+$offset-6: 8em;
+
+
+/* ~ 
+
+article responsive offsets
+
+$sizes var needs 3 vals: small device, medium device, large device
+
+~ */
+
+// headlines
+
+$h2-padding-top-sizes: $offset-2 $offset-2 $offset-2;
+$h2-padding-bottom-sizes: $offset-2 $offset-2 $offset-2;
+$divider-padding-bottom-sizes: $offset-2 $offset-2 $offset-2;
+
+// text content
+
+$p-padding-bottom-sizes: $offset-1 $offset-1 $offset-1;

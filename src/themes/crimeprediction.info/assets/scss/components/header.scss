@@ -1,0 +1,30 @@
+@import "../settings/zindex.scss";
+@import "../settings/sizes.scss";
+@import "../settings/borders.scss";
+@import "../settings/fonts.scss";
+
+header {
+	width: 100%;
+	position: relative;
+	border-bottom: $nav-border-width solid $nav-border-color;
+	background-color: $black;
+	box-sizing: border-box;
+  	z-index: 10000;
+	padding: $offset-2 $offset-3 $offset-2 $offset-3;
+
+	a#title { 
+		display: inline-block;
+		color: $white;
+		text-decoration: none;
+
+	}
+	nav.main {
+		display: inline-block;
+		float: right;
+		margin-top: 3px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}

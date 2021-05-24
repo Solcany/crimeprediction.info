@@ -1,0 +1,23 @@
+// variables
+@import "./settings/colors.scss";
+@import "./settings/fonts.scss";
+@import "./settings/media-queries.scss";
+@import "./settings/sizes.scss";
+@import "./settings/borders.scss";
+@import "./settings/zindex.scss";
+@import "./settings/scrollbar.scss";
+
+// components
+@import "./components/font-styles.scss";
+@import "./components/header.scss";
+@import "./components/table-of-contents.scss";
+@import "./components/sidebar.scss";
+@import "./components/reading-settings.scss";
+@import "./components/global.scss";
+
+// pages
+@import "./components/pages/index-page.scss";
+@import "./components/pages/single-page.scss";
+@import "./components/pages/about-page.scss";
+
+

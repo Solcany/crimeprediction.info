@@ -1,0 +1,26 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Crime prediction – Surviving the predictions made by the limited computer models"
+theme = "crimeprediction.info"
+
+[markup.tableOfContents]
+startLevel = 1
+endLevel = 3
+ordered = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    url = "./about"
+    weight = -110
+
+[Params]
+webfont_urls = [
+	"https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500&display=swap",
+	"https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300&display=swap"
+]

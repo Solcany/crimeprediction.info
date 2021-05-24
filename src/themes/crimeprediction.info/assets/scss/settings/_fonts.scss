@@ -1,0 +1,107 @@
+@import "./media-queries";
+@import "./sizes";
+
+@font-face {
+  font-family: 'gangster-regular';
+  font-style: normal;
+  src: url(./../GangsterGrotesk-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family:'FiraMono-regular';
+  font-style: normal;
+  src: url(./../FiraMono-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'hk-gothic';
+  font-weight: bold;
+  font-style: normal;
+  src: url(./../HK-gothic.ttf) format('truetype');
+}
+
+/* ~
+
+Font names & weights
+
+Font sizes – expects 3 vals: small, large, very-large
+
+~ */
+
+// WIP: CLEAN THIS:
+$code-paddings-bottom: $offset-3 $offset-3 $offset-3;
+
+
+$title-font: 'hk-gothic';
+$title-font-weight: 300;
+$title-sizes: 1em 1em 1em;
+
+$headline-font: 'hk-gothic';
+$headline-font-weight: 300;
+$h1-sizes: 1.2rem 1.4rem 1.56rem;
+$h1-toc-sizes: 1em 1em 1em;
+$h2-sizes: 1.56rem 1.56rem 1.56rem;
+$h2-toc-sizes: 1em 1em 1em;
+
+$h2-paddings-bottom: $offset-0 $offset-0 $offset-0;
+$h2-paddings-top: $offset-3 $offset-3 $offset-3;
+
+
+$h3-sizes: 1.3rem 1.3rem 1.3rem;
+$h3-toc-sizes: 1em 1em 1em;
+$h3-toc-line-height: 1.8em;
+
+$h3-paddings-bottom: $offset-0 $offset-0 $offset-0;
+$h3-paddings-top: $offset-2 $offset-2 $offset-2;
+
+$h4-sizes: 1.125rem 1.125rem 1.125rem;
+$h4-toc-sizes: 0.9em 0.9em 0.9em;
+$h4-toc-line-height: 1.8em;
+
+$h4-paddings-bottom: $offset-0 $offset-0 $offset-0;
+
+$p-font: 'gangster-regular';
+$p-font-weight: 300;
+$p-line-height: 1.5em;
+$p-sizes: 1.125rem 1.125rem 1.125rem;
+
+$secondary-content-toggle-sizes: 0.85em 0.85em 0.85em;
+
+$pretitle-font: 'gangster-regular';
+$pretitle-font-weight: 300;
+$pretitle-font-color: $gray-4;
+$pretitle-font-alignment: left;
+$pretitle-font-height: 1.6em;
+$pretitle-sizes: 1rem 1rem 1rem;
+
+$inline-content-toggle-font: 'gangster-regular';
+$inline-content-toggle-font-weight: 300;
+$inline-content-toggle-line-height: 1.6em;
+$inline-content-toggle-font-sizes: 1.125rem 1.125rem 1.125rem;
+
+$figcaption-font: $p-font;
+$figcaption-font-weight: $p-font-weight;
+$figcaption-line-height: $p-line-height;
+$figcaption-sizes: 1.125rem 1.125rem 1.125rem;
+
+$toc-toggle-font: 'hk-gothic';
+$toc-toggle-font-weight: 300;
+$toc-button-sizes: 0.9em 0.9em 0.9em;
+
+$toc-link-font: 'gangster-regular';
+$toc-link-font-weight: 400;
+$toc-link-h1-size: 1.25em;
+
+$title-link-font: 'gangster-regular';
+$title-link-font-weight: 300;
+$title-link-sizes: 1em 1em 1em;
+
+$code-font: 'FiraMono-regular';
+$code-font-weight: 300;
+$code-line-height: 1.35em;
+$code-font-sizes: 1.1rem 1.1rem 1.1rem;
+
+$quote-font: 'FiraMono-regular';
+$quote-font-weight: 300;
+$quote-line-height: 1.35em;
+$quote-font-sizes: 1.1rem 1.1rem 1.1rem;

@@ -1,0 +1,26 @@
+{{ if .IsPage }}
+
+<header class="page">
+
+{{ end }}
+
+{{ if .IsHome }}
+
+<header id="home">
+
+{{ end }}
+
+
+
+	<a id="title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+	<span id="author">by Matúš Solčány 2020</span>
+	{{ with .Site.Menus.main }}
+		<nav class="main">
+			<ul>
+				{{ range . }}
+				<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+				{{ end }}
+			</ul>
+		</nav>
+	{{ end }}
+</header>

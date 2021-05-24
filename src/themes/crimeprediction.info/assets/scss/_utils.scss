@@ -1,0 +1,37 @@
+// responsive generators
+
+@mixin create-responsive-style($style-name, $responsive-values, $target-element: false) {
+	// small device
+	$small-value: nth($responsive-values, 1);
+	@media only screen and (max-width: $query-small) {
+		@if $target-element {
+			#{$target-element} {
+				#{$style-name}: $small-value;
+			}
+		} @else {
+			#{$style-name}: $small-value;
+		}
+	}
+	// medium device
+	$medium-value: nth($responsive-values, 2);
+	@media only screen and (min-width: $query-small) and (max-width: $query-medium) {
+		@if $target-element {
+			#{$target-element} {
+				#{$style-name}: $medium-value;
+			}
+		} @else {
+			#{$style-name}: $medium-value;
+		}	
+	}
+	// large device
+	$large-value: nth($responsive-values, 3);
+	@media only screen and (min-width: $query-medium) {
+		@if $target-element {
+			#{$target-element} {
+				#{$style-name}: $large-value;
+			}
+		} @else {
+			#{$style-name}: $large-value;
+		}	
+	}
+}

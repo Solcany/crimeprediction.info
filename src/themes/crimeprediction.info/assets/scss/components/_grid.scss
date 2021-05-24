@@ -1,0 +1,58 @@
+@import "../settings/grid-settings.scss";
+@import "../settings/media-queries.scss";
+
+// grid body
+@mixin content-grid($grid-width: 100%) {
+	display: grid;
+	width: $grid-width;
+
+	$small-padding: nth($grid-horizontal-padding, 1);
+	@media only screen and (max-width: $query-small) {
+	grid-template-columns: $small-padding repeat($grid-cols-amount, 1fr) $small-padding;
+	}
+
+	// medium device
+	$large-padding: nth($grid-horizontal-padding, 2);
+	@media only screen and (min-width: $query-small) and (max-width: $query-medium) {
+			grid-template-columns: $large-padding repeat($grid-cols-amount, 1fr) $large-padding;
+	}
+
+
+	// large device
+	$large-padding: nth($grid-horizontal-padding, 2);
+	@media only screen and (min-width: $query-medium) {
+			grid-template-columns: $large-padding repeat($grid-cols-amount, 1fr) $large-padding;
+	}
+}
+
+// grid space components 
+
+@mixin responsive-content-space() {
+	@include create-responsive-content-space($grid-content-start-columns,
+											 $grid-content-end-columns)
+}
+
+// responsive grid generators
+@mixin create-responsive-content-space($grid-start-cols, $grid-end-cols) {
+	// small device
+	$small-column-start: nth($grid-start-cols, 1);
+	$small-column-end: nth($grid-end-cols, 1);
+
+	@media only screen and (max-width: $query-small) {
+		grid-column: $small-column-start / span $small-column-end;
+	}
+
+	// medium device
+	$medium-column-start: nth($grid-start-cols, 2);
+	$medium-column-end: nth($grid-end-cols, 2);
+	@media only screen and (min-width: $query-small) and (max-width: $query-medium) {
+		grid-column: $medium-column-start / span $medium-column-end;
+	}
+
+	// large device
+	$large-column-start: nth($grid-start-cols, 3);
+	$large-column-end: nth($grid-end-cols, 3);	
+	@media only screen and (min-width: $query-medium) {
+		grid-column: $large-column-start / span $large-column-end;
+	}
+}

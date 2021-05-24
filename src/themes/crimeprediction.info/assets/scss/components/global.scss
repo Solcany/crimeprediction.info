@@ -1,0 +1,57 @@
+@import "../settings/scrollbar.scss";
+@import "../settings/colors.scss";
+
+
+html {
+
+   // overflow-x: hidden;
+
+    body {
+	    transition: filter .75s;
+	    background-color: $black;
+        overflow-x: hidden;
+        position: relative;
+        width: 100%;
+
+
+	    a.link-button {
+		    padding: $offset-1 $offset-2;
+		    cursor: pointer;
+		    margin: 2px;
+		    border: 2px solid $theblue;
+   		margin: 0 5px;
+		    transition: all .25s;
+		    filter: blur(0px);
+
+		    &.large {
+			    padding-top: calc(#{$offset-1} + 5px);
+
+			    &:hover {
+    			    filter: blur(8px);
+			    }
+		    }
+
+		    &:hover {
+			    background-color: $theblue;
+    		    filter: blur(3px);
+
+    	    }
+	        &:active {
+				color: black;
+	        }
+	    }
+    }
+}
+
+body::-webkit-scrollbar {
+  width: $scrollbar-width;
+}
+ 
+body::-webkit-scrollbar-track {
+  //border-left: solid $scrollbar-border-width $scrollbar-outline-color;
+  background-color: $scrollbar-track-color;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: $scrollbar-thumb-color;
+}

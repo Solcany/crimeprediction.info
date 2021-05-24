@@ -1,0 +1,15 @@
+{{ define "main" }}
+	{{ partial "sidebar" . }}
+	<main class="single">
+		<article>
+			{{/* $content := replace .Content "</button>"  "</button><div class='content'>" | safeHTML*/}}
+			{{/* $content = replace $content "</section>" "</div></section>" | safeHTML */}}
+			{{ .Content }}
+		</article>
+	</main>
+	<script>
+		const loading_blurred_el = document.querySelector("body")
+		loading_blurred_el.style.filter = "blur(100px)";
+	</script>
+
+{{ end }}

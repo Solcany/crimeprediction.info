@@ -1,0 +1,11 @@
+{{ if eq .Section "posts" }}
+<!-- if is post show reading progress -->
+<!-- WIP: hide read prog for now	<div id="reading-progress-bar"> </div> -->
+<!-- if is post add table of contents -->
+	<aside style="visibility: hidden;">
+		<button id="toc-toggle" type="button">
+			<span id="toc-toggle-label" >table of contents</span>
+		</button>
+		{{.TableOfContents}}
+	</aside>
+{{ end }}

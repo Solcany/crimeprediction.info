@@ -1,0 +1,253 @@
+@import "../settings/media-queries";
+@import "../settings/fonts";
+@import "../utils";
+
+
+h1,h2,h3,h4,h5,h6,p {
+	color: $type-color;
+}
+
+h3 {
+	//text-transform: uppercase;
+	padding-bottom: $offset-2;
+}
+
+/* ~ 
+
+Font style generator
+
+~ */
+
+@mixin create-responsive-font-styles($element, $font-name, $font-weight, $sizes, $font-alt: 'sans-serif', $font-transform: false, $font-color: false, $font-alignment: false, $font-line-height: false) {
+	// expects a list of 3 font $sizes
+
+	// small device
+	$small-size: nth($sizes, 1);
+	@media only screen and (max-width: $query-small) {
+		#{$element} {
+			font-family: $font-name, #{$font-alt};
+			font-weight: $font-weight;
+			font-size: $small-size;
+		}
+	}
+
+	// medium device
+	$medium-size: nth($sizes, 2);
+	@media only screen and (min-width: $query-small) and (max-width: $query-medium) {
+		#{$element} {
+			font-family: $font-name, #{$font-alt};
+			font-weight: $font-weight;
+			font-size: $medium-size;
+		}
+	}
+	// large device
+	$large-size: nth($sizes, 3);
+	@media only screen and (min-width: $query-medium) {
+		#{$element} {
+			font-family: $font-name, #{$font-alt};
+			font-weight: $font-weight;
+			font-size: $large-size;		
+		}
+	}
+
+	@if $font-transform {
+		#{$element} {
+			text-transform: $font-transform;
+		}
+	}
+	@if $font-alignment {
+		#{$element} {
+			text-align: $font-alignment;
+		}
+	}
+	@if $font-color {
+		#{$element} {
+			color: $font-color;
+		}
+	}
+	@if $font-line-height {
+		#{$element} {
+			line-height: $font-line-height;
+		}
+	}
+}
+
+
+
+
+
+/* ~ 
+
+Generate global responsive font classes
+
+! page specific font classes are set in the page's stylesheet !
+
+~ */
+@include create-responsive-font-styles($element: "a#title",
+									   $font-name: $title-font,
+									   $font-weight: $title-font-weight, 
+									   $sizes: $title-sizes,
+									   $font-alt: sans-serif,
+									   $font-color: $gray-0);
+
+@include create-responsive-font-styles($element: "header #author",
+									   $font-name: $p-font,
+									   $font-weight: $title-font-weight,
+									   $sizes: $title-sizes,
+									   $font-alt: sans-serif,
+									   $font-color: $gray-0);
+
+@include create-responsive-font-styles($element: "h1, a.link-button.large",
+									   $font-name: $headline-font,
+									   $font-weight: $headline-font-weight, 
+									   $sizes: $h1-sizes,
+									   $font-color: $gray-0,
+									   $font-alt: sans-serif,
+									   $font-transform: uppercase);
+
+
+@include create-responsive-font-styles($element: "h2",
+									   $font-name: $headline-font,
+									   $font-weight: $headline-font-weight, 
+									   $sizes: $h2-sizes,
+									   $font-alt: sans-serif,
+                                       $font-line-height: 1.2em,
+									   $font-color: $gray-0,
+									   $font-transform: uppercase);
+
+@include create-responsive-style("padding-bottom", $h2-paddings-bottom, 'h2');
+@include create-responsive-style("padding-top", $h2-paddings-top, 'h2');
+
+@include create-responsive-font-styles($element: "h3",
+									   $font-name: $headline-font,
+									   $font-weight: $headline-font-weight, 
+									   $sizes: $h3-sizes,
+									   $font-color: $gray-0,
+									   $font-alt: sans-serif);
+
+@include create-responsive-style("padding-bottom", $h3-paddings-bottom, 'h3');
+@include create-responsive-style("padding-top", $h3-paddings-top, 'h3');
+
+@include create-responsive-font-styles($element: "h4",
+									   $font-name: $headline-font,
+									   $font-weight: $headline-font-weight, 
+									   $sizes: $h4-sizes,
+									   $font-color: $gray-0,
+									   $font-alt: sans-serif);
+
+@include create-responsive-style("padding-bottom", $h4-paddings-bottom, 'h4');
+
+@include create-responsive-font-styles($element: "p",
+									   $font-name: $p-font,
+									   $font-weight: $p-font-weight, 
+									   $sizes: $p-sizes,
+									   $font-color: $gray-0,
+									   $font-alt: sans-serif,
+									   $font-line-height: $p-line-height);
+
+@include create-responsive-font-styles($element: "button[data-toggle-content]",
+									   $font-name: $p-font,
+									   $font-weight: $p-font-weight,
+									   $sizes: $p-sizes,
+									   $font-color: $theblue,
+									   $font-alt: sans-serif,
+									   $font-line-height: $p-line-height);
+
+@include create-responsive-font-styles($element: "button[data-toggle-content] span",
+									   $font-name: $p-font,
+									   $font-weight: $p-font-weight,
+									   $sizes: $secondary-content-toggle-sizes,
+									   $font-color: $theblue,
+									   $font-alt: sans-serif,
+									   $font-line-height: $p-line-height);
+
+@include create-responsive-font-styles($element: "em",
+									   $font-name: 'gangster-regular',
+									   $font-weight: $p-font-weight, 
+									   $sizes: $p-sizes,
+									   $font-color: $theblue,
+									   $font-alt: sans-serif);
+
+// @include create-responsive-font-styles($element: "strong",
+// 									   $font-name: 'gangster-regular',
+// 									   $font-weight: $p-font-weight, 
+// 									   $font-color: $gray-1,
+// 									   $sizes: $p-sizes,
+// 									   $font-alt: sans-serif);
+
+@include create-responsive-font-styles($element: "code, span.secondary-content, span.secondary-content a",
+									   $font-name: $code-font,
+									   $font-weight: $code-font-weight, 
+									   $font-line-height: $code-line-height,
+									   $sizes: $code-font-sizes,
+									   $font-color: $theblue,
+									   $font-alt: monospace);
+
+@include create-responsive-style("margin-bottom", $code-paddings-bottom, 'pre');
+
+@include create-responsive-font-styles($element: ".pretitle, .toc_pretitle",
+									   $font-name: $pretitle-font,
+									   $font-weight: $pretitle-font-weight, 
+									   $sizes: $pretitle-sizes,
+									   $font-alt: sans-serif,
+									   $font-color: $pretitle-font-color,
+									   $font-alignment: $pretitle-font-alignment);
+
+@include create-responsive-font-styles($element: 'article button',
+									   $font-name: $inline-content-toggle-font,
+									   $font-weight: $inline-content-toggle-font-weight, 
+									   $sizes: $inline-content-toggle-font-sizes,
+									   $font-color: $gray-0,
+									   $font-alt: sans-serif);
+
+@include create-responsive-font-styles($element: "figcaption",
+									   $font-name: $figcaption-font,
+									   $font-weight: $figcaption-font-weight, 
+									   $sizes: $figcaption-sizes,
+									   $font-alt: sans-serif);
+
+
+@include create-responsive-font-styles($element: "button.sidebar-toggle , nav.main a",
+									   $font-name: $toc-toggle-font,
+									   $font-weight: $toc-toggle-font-weight, 
+									   $sizes: $toc-button-sizes,
+									   $font-alt: sans-serif,
+									   $font-color: $gray-0,
+									   $font-transform: uppercase);
+
+// toc
+@include create-responsive-font-styles($element: "#TableOfContents ul li div.chapter_wrapper a",
+									   $font-name: $headline-font,
+									   $font-weight: $headline-font-weight, 
+									   $sizes: $h1-toc-sizes,
+									   $font-color: $gray-1,
+									   $font-alt: sans-serif,
+									   $font-transform: uppercase);
+
+@include create-responsive-font-styles($element: "#TableOfContents ul li ul li a",
+									   $font-name: $headline-font,
+									   $font-weight: $headline-font-weight, 
+									   $sizes: $h2-toc-sizes,
+									   $font-color: $gray-1,
+									   $font-alt: sans-serif,
+									   $font-transform: uppercase);
+
+@include create-responsive-font-styles($element: "#TableOfContents ul li ul li ul li a",
+									   $font-name: $headline-font,
+									   $font-weight: $headline-font-weight, 
+									   $sizes: $h3-toc-sizes,
+                                       $font-line-height: $h3-toc-line-height,
+									   $font-color: $gray-1,
+									   $font-alt: sans-serif,
+									   $font-transform: capitalize);
+
+@include create-responsive-font-styles($element: "#TableOfContents ul li ul li ul li ul li a",
+									   $font-name: $headline-font,
+									   $font-weight: $headline-font-weight, 
+									   $sizes: $h4-toc-sizes,
+                                       $font-line-height: $h4-toc-line-height,
+									   $font-color: $gray-1,
+									   $font-alt: sans-serif,
+									   $font-transform: capitalize);
+
+

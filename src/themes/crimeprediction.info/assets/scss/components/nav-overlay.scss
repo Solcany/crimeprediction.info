@@ -1,0 +1,136 @@
+@import "../settings/zindex.scss";
+@import "../settings/sizes.scss";
+@import "../settings/borders.scss";
+@import "../settings/fonts.scss";
+
+div#overlay {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	z-index: $zindex4;
+    pointer-events: none;
+    background: none;        
+
+	header {
+    	pointer-events:auto;
+		position: absolute;
+		width: 100%;
+		border-bottom: $nav-border-width solid $nav-border-color;
+		background-color: $darkgray-1;
+		box-sizing: border-box;
+	 	-webkit-transition: all 0.125s;
+	  	-moz-transition: all 0.125s;
+	  	transition: all 0.125s;
+	  	z-index: $zindex5;
+
+
+		&.nav-up {
+			-webkit-transform: translateY(-101%);
+			transform: translateY(-101%);
+		}
+
+		&.nav-down {
+		  	-webkit-transform: translateY(0);
+		 	 transform: translateY(0);
+		}
+
+
+		a#title {
+			display: inline-block;
+			color: $white;
+			text-decoration: none;
+			padding: $offset-2 $offset-1;
+		}
+	}
+
+	aside#toc-wrapper {
+		position: absolute;
+    	pointer-events:auto;
+		height: 100%;
+		border-right: $nav-border-width solid $nav-border-color;
+		background-color: $darkgray-1;
+    	transition: background-color .15s;
+
+		&:hover {
+			background-color: $darkgray-0 !important;
+		}
+
+
+		nav#TableOfContents {
+			display: inline-block;
+			margin-top: $offset-4;
+			height: 100%;
+			float: left;
+
+			a {
+				text-decoration: none;
+				color: $white;
+				font-family: $toc-link-font;
+				font-weight: $toc-link-font-weight;
+			}
+
+			ul {
+				padding-left: $offset-1;
+				padding-top: $offset-2;
+
+				li { // toc h1 title
+					padding-bottom: $offset-1;
+
+					a {
+						font-size: $toc-link-h1-size;
+						display: block;
+					}
+
+					ul {
+						li { // toc h2 title
+							a {
+
+							}
+						}
+					}
+
+				}
+			}
+		}
+
+		button#toc-toggle {
+			position: relative;
+    		text-transform: uppercase;
+			width: 40px;
+			height: 100%;
+			color: $type-color;
+			white-space: pre;
+			display: inline-block;
+			background: none;
+    		border: none;
+    		border-right: 1px solid $darkgray-2;
+			border-left: $nav-border-width solid $nav-border-color;
+
+    		padding: 0;
+			float: left;
+
+			&:focus {
+				outline: 0;
+			}
+
+			span#toc-toggle-label {
+				position: absolute;
+    			transform-origin: left 0;
+				transform: rotate(-90deg) translateY(-50%);
+				top: 58%;
+				left: 50%;
+
+			}
+		}
+	}
+
+	div#reading-progress-bar {
+		position: absolute;
+		z-index: $zindex4;
+		z-index: 1000;
+		width: 100%;
+		height: 4px;
+		background-color: $gray-4;
+	}
+
+}

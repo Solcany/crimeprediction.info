@@ -1,0 +1,23 @@
+{{ define "main" }}
+	<main id="home">
+	<div class="text">
+			<p>
+Algorithmic crime prediction is a new technology promising to make policing more efficient by predicting the likelihood of criminal activity in a geographical region or the likelihood of a person being victim or perpetrator of a crime in the future, thus focusing policing resources where they matter. These predictions are derived from mathematical models of human behaviour based on sociological theories, vast amounts of personal data and databases of criminal history. 
+	   </p>
+	   <a class="link-button large" href="./posts/thesis/"> read the thesis</a>
+	</div>
+
+	  <div class="data-dragger-container">
+	  	<div data-render-line></div>
+	  </div>
+
+	  <div id="overlay">
+	   <img id="theface" src="./images/home-page/head.png">
+	  </div>
+	</main>
+	<script>
+		const loading_blurred_el = document.querySelector("body")
+		loading_blurred_el.style.filter = "blur(100px)";
+	</script>
+
+{{ end }}

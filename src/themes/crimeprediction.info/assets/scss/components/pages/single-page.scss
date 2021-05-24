@@ -1,0 +1,397 @@
+@import "../../settings/borders.scss";
+@import "../../settings/zindex.scss";
+@import "../../settings/sizes.scss";
+@import "../../settings/grid-settings.scss";
+@import "../../utils.scss";
+@import "../grid.scss";
+
+main.single {
+	position: relative;
+	padding: $offset-5 0 0 0;
+	margin: 0;
+
+	article {
+		width: 100%;
+
+	  	section {
+	  		position: relative;
+			@include content-grid($grid-width: 100%);
+	  		border-top: solid 1px $darkgray-border;
+	  		background-color:  $darkgray-3;
+		  	transition: all .125s;
+
+		  	span.pretitle {
+		  		display: block;
+		  		padding-top: $offset-1;
+		  	}
+
+		  	&[data-section-toggled="false"] {
+	  			background-color:  $darkgray-3;
+		  		padding-bottom: 0px;
+
+			  	&#section-0 {
+					background-image: linear-gradient(180deg, rgba(35,35,35,1) 33%, rgba(33,33,33,1) 100%);
+					background-color: $darkgray-6-hover;
+
+					&:hover {
+						background-image:none;
+
+						button.folder-toggle {
+							background-color: $darkgray-6-hover;
+						}
+					}
+
+	  				button.folder-toggle {
+						background-color: $darkgray-6;
+	  				}
+			  	}
+			  	&#section-1 {
+					background-image: linear-gradient(180deg, rgba(38,38,38,1) 33%, rgba(36,36,36,1) 100%);
+					background-color: $darkgray-5-hover;
+
+					&:hover {
+						background-image: none;
+						//background-color: $darkgray-5-hover;
+						button.folder-toggle {
+							background-color: $darkgray-5-hover;
+						}
+					}
+
+	  				button.folder-toggle {
+						background-color: $darkgray-5;
+	  				}
+			  	}
+			  	&#section-2 {
+					background-image: linear-gradient(180deg, rgba(41,41,41,1) 33%, rgba(39,39,39,1) 100%);
+					background-color: $darkgray-4-hover;
+
+					&:hover {
+						background-image: none;
+						//background-color: $darkgray-4-hover;
+
+						button.folder-toggle {
+							background-color: $darkgray-4-hover;
+						}
+					}
+
+	  				button.folder-toggle {
+						background-color: $darkgray-4;
+	  				}
+			  	}
+			  	&#section-3 {
+					background-image: linear-gradient(180deg, rgba(44,44,44,1) 33%, rgba(42,42,42,1) 100%);
+					background-color: $darkgray-3-hover;
+
+					&:hover {
+						background-image: none;
+						//background-color: $darkgray-3-hover;
+
+						button.folder-toggle {
+							background-color: $darkgray-3-hover;
+						}
+					}
+
+	  				button.folder-toggle {
+						background-color: $darkgray-3;
+	  				}
+			  	}
+			  	&#section-4 {
+					background-image: linear-gradient(180deg, rgba(46,46,46,1) 33%, rgba(40,40,40,1) 100%);
+					background-color: $darkgray-2-hover;
+					&:hover {
+						background-image: none;
+						//background-color: $darkgray-2-hover;
+
+						button.folder-toggle {
+							background-color: $darkgray-2-hover;
+						}
+					}
+	  				button.folder-toggle {
+						background-color: $darkgray-2;
+	  				}
+			  	}
+
+		  		&:hover {
+		  			background-color: $darkgray-3-hover;
+
+		  			button.folder-toggle {
+		  				cursor: s-resize;
+						background-color: $darkgray-3-hover;
+		  			}
+
+		  		}
+
+			  	div.content {
+			  		height: 100px;
+			  		visibility: hidden;
+			  		overflow: hidden;
+			  	}
+			}
+
+		  	&[data-section-toggled="true"] {
+	  			background-color: $black;
+		  		padding-bottom: $offset-6;
+
+				button.folder-toggle {
+	  				background-color: $black;
+
+					&:hover {
+						cursor: n-resize;
+					}
+			  		span.toggle-icon {
+						background-image: url("./../icons/folder_up.png");
+			  		}
+				}
+
+			  	div.content {
+			  		height: auto;
+			  		overflow: auto;
+			  	}
+		   	}
+
+		   	&[data-section-toggled="false"] {
+				button.folder-toggle {
+					span.toggle-icon {
+						background-image: url("./../icons/folder_down.png");
+					}
+				}
+		   	}
+
+	  		button.folder-toggle {
+			  		position: absolute;
+			  		outline: 0;
+			  		z-index: $zindex4;
+			  		border: none;
+			  		border-top: solid 1px $darkgray-border;
+			  		border-right: solid 1px $darkgray-border;
+			  		background: $darkgray-3;
+					text-align: left;
+					// display: inline-block;
+					// box-sizing: border-box;
+
+					@media only screen and (max-width: $query-small) {
+			  			padding: 0 nth($grid-horizontal-padding, 1);
+					}
+					@media only screen and (min-width: $query-small) {
+						padding: 0 nth($grid-horizontal-padding, 2);
+					} // reuse mixin
+
+					@include create-responsive-style("padding-top", $h2-padding-top-sizes);
+					@include create-responsive-style("padding-bottom", $h2-padding-bottom-sizes);
+
+			  		&:focus {
+			  			outline: 0;
+			  		}
+
+					span.pretitle {
+						display: block;
+						padding-bottom: $offset-1;
+					}
+
+			  		h1 {
+		  				display: inline;
+			  			&.without-pretitle {
+			  				//padding-top: $offset-2;
+			  			}
+			  		}
+
+			  		span.toggle-icon {
+						@media only screen and (max-width: $query-small) {
+								display: block;
+								margin-left: 0;
+								width: 30px;
+								height: 17px;
+							//	margin-bottom: $offset-1;
+							}
+
+							display: inline-block;
+							margin-right: 0;
+							width: 22px;
+							height: 14px;
+							margin-left: $offset-1;
+							background-size: cover;
+			  			}
+			}
+
+			div.content {
+		  		position: relative;
+		  		@include responsive-content-space()
+		  		padding-top: $offset-3;
+			  	overflow: hidden;
+
+
+
+
+		  		p {
+	 				width: 100%;
+		  			@include create-responsive-style("padding-bottom", $p-padding-bottom-sizes);
+
+					em {
+						padding : 0;
+						display: inline;
+					}
+		  		button[data-toggle-content] {
+					background: none;
+					display: inline-block;
+					text-decoration: none;
+					cursor: zoom-in;
+					border: none;
+					padding: 0;
+	 					transition: all .25s;
+
+					&:focus {
+	 					outline: none ! important;
+	 				}
+
+					span {
+		  			    //background: $theblue;
+						color: $theblue;
+	 					padding: 0;
+	 					display: inline-block;
+						border: 1px solid $theblue;
+						margin: 0;
+						padding-bottom: 10px;
+						padding-left: 4px;
+						padding-right: 4px;
+						margin-left: 5px;
+
+	 					//width: 17px;
+	 					height: 13px;
+	 					//filter: blur(0px);
+					}
+					&:hover {
+	 					filter: blur(3px);
+	 				}
+		  		}
+
+				span.secondary-content {
+					color: $theblue;
+					width: 100%;
+					display: inline;
+					padding: $offset-1;
+					padding-left: 0;
+					box-sizing: border-box;
+
+		  			&[data-toggled="false"] {
+			  			display: none;
+			  		}
+		  			&[data-toggled="true"] {
+						display: block;
+		  			}
+
+		  			span.source-num {
+		  				display: block;
+
+		  			}
+
+		  			a {
+		  				text-decoration: underline;
+		  				display: inline-block;
+	 					transition: all .25s;
+	 					&:hover {
+					    	filter: blur(3px);
+							cursor: ne-resize;
+
+					    }
+
+					    &:active {
+		  					color: black;
+					    }
+
+		  			}
+				}
+		  	}
+
+		  	figure {
+		  		width: 100%;
+		  		height: 100%;
+		  		display: block;
+		  		position: relative;
+		  		padding-bottom: $offset-2;
+
+		  		canvas {
+		  			position: absolute;
+		  		}
+
+		  		img {
+		  			width: 100%;
+	  				transition: filter .15s;
+		  			margin-bottom: $offset-1;
+		  			transition-timing-function: ease-in-out;
+		  			margin: 0;
+		  		}
+
+		  		div.placeholder {
+		  			position: relative;
+		  			width: 60px;
+		  			height: 35px;
+		  			border: 2px solid $theblue;
+		  			margin-bottom: $offset-1;
+		  			transition: all .125s;
+
+		  			&:after {
+		  				position: absolute;
+		  				left: 50%;
+		  				top: 50%;
+		  				transform: translate(-50%, -50%);
+		  				content: "";
+		  				width: 45px;
+		  				height: 20px;
+		  				border: 2px solid $theblue;
+		  			}
+
+		  			&:hover {
+		  				&:after {
+		  				}
+		  				background-color: $theblue;
+		  				filter: blur(7px);
+		  			}
+		  		}
+
+		  		&[data-image-quality="placeholder"] {
+
+		  			div.placeholder {
+			  			cursor: zoom-in;
+			  			//filter: blur(0px);
+
+			  			&:hover {
+			  				//filter: blur(2px);
+			  			}
+			  		}
+			  	}
+
+		  		&[data-image-quality="low"] {
+
+			  		img {
+				  		cursor: zoom-in;
+				  		position: relative;
+				  		z-index: $zindex1;
+
+				  		//filter: blur(0px);
+				  		&:hover {
+				  			//	filter: blur(10px);
+				  		}
+			  		}
+
+		  			canvas {
+		  				z-index: $zindex5;
+		  			}
+		  		}
+
+		  		&[data-image-quality="high"] {
+
+		  			img {
+			  			cursor: default;
+		  			}
+
+		  		}
+
+		  		figcaption {
+		  			color: $theblue;
+		  			text-align: left;
+		  		}
+		  	}
+			}
+		}
+	}
+}

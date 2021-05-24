@@ -1,0 +1,21 @@
+{{ if eq .Section "posts" }}
+<!-- if is post show reading progress -->
+<!-- WIP: hide read prog for now	<div id="reading-progress-bar"> </div> -->
+<!-- if is post add table of contents -->
+	<aside style="visibility: visible;">
+		<div class="sidebar-wrapper" id="toc-wrapper">
+			<button class="sidebar-toggle" id="toc-toggle" type="button">
+			<span class="sidebar-toggle-label" >table of contents</span>
+			</button>
+			<div class="sidebar_content">
+			{{.TableOfContents}}
+			</div>
+		</div>
+<!-- 		<div class="sidebar-wrapper" id="rs-wrapper">
+			<button class="sidebar-toggle" id="rs-toggle" type="button"><span class="sidebar-toggle-label" >reading settings</span>
+			</button>
+			<nav id="Settings">
+			</nav>
+		</div> -->
+	</aside>
+{{ end }}
