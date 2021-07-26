@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Crime prediction – Surviving the predictions made by the limited computer models</title>
+    <link>https://matussolcany.com/crimeprediction/posts/</link>
+    <description>Recent content in Posts on Crime prediction – Surviving the predictions made by the limited computer models</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Dec 2019 13:35:29 +0100</lastBuildDate><atom:link href="https://matussolcany.com/crimeprediction/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crime Prediction - Surviving the predictions made by the limited computer models</title>
+      <link>https://matussolcany.com/crimeprediction/posts/thesis/</link>
+      <pubDate>Tue, 17 Dec 2019 13:35:29 +0100</pubDate>
+      
+      <guid>https://matussolcany.com/crimeprediction/posts/thesis/</guid>
+      <description>Abstract  Algorithmic crime prediction is a new technology promising to make policing more efficient by predicting the likelihood of criminal activity in a geographical region or the likelihood of a person being victim or perpetrator of a crime in the future, thus focusing policing resources where they matter. These predictions are derived from mathematical models of human behaviour based on sociological theories, vast amounts of personal data and databases of criminal history.</description>
+    </item>
+    
+  </channel>
+</rss>

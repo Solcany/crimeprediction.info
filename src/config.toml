@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://matussolcany.com/crimeprediction"
 languageCode = "en-us"
 title = "Crime prediction – Surviving the predictions made by the limited computer models"
 theme = "crimeprediction.info"
