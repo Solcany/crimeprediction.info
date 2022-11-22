@@ -53,7 +53,7 @@ const get_panel_width = function() {
 // }
 
 const folderize_toc = function() {
-	const toc_chapters_raw = document.querySelectorAll('#TableOfContents > ul > li')
+	const toc_chapters_raw = document.querySelectorAll('#TableOfContents > ol > li')
 	toc_chapters_raw.forEach(function(chapter_raw, index) {
 		chapter_raw.setAttribute("chapter", "");
 		chapter_raw.classList.add("ch-" + index);
@@ -66,7 +66,7 @@ const folderize_toc = function() {
 	// create a chapter toggle, push it to the dom
 	toc_chapters.forEach(function(chapter, index) {
 
-		let chapter_content = chapter.querySelector('ul')
+		let chapter_content = chapter.querySelector('ol')
 		if(chapter_content != null && chapter_content != undefined) {
 
 			// !!! THE RELATED CONTENT FOLDER OUTSIDE OF TOC !!!

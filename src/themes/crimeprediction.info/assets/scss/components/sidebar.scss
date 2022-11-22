@@ -90,24 +90,27 @@ aside {
 			max-height: 90vh;
 			overflow-y: auto;
 
-			nav {
-				&#TableOfContents {
+			nav#TableOfContents {
 					position: relative;
 					top: 0;
 					display: inline-block;
 					height: 100%;
-					//width: auto;
-					//float: left;
 					overflow-x: hidden;
 					overflow-y: hidden;
-
 					background-color: black;
 					padding-top: $offset-4;
+
 					a {
 						text-decoration: none;
+						color: $white;
+						font-family: $toc-link-font;
+						font-weight: $toc-link-font-weight;
 					}
 
-					> ul { // depth 1
+					ol { // depth 1
+						//padding-left: $offset-1;
+						//padding-top: $offset-2;		
+
 						li[chapter] { // chapter headline
 							padding-bottom: $offset-4;
 							position: relative;
@@ -117,7 +120,7 @@ aside {
 							}
 
 							// chapter content
-							> ul { // depth 2
+							> ol { // depth 2
 								padding-top: $offset-1;
 								padding-left: $offset-3;
 		  						border-top: solid 1px $darkgray-border;
@@ -125,14 +128,14 @@ aside {
 								li { // h2
 									padding-top: $offset-2;
 
-									> ul { // depth 3
+									> ol { // depth 3
 										//padding-top: $offset-1;
 										padding-left: $offset-1;
 
 										li { // h3
 											padding-top: $offset-1;
 
-											> ul { //depth 4
+											> ol { //depth 4
 												padding-left: $offset-1;
 
 												li { // h4
@@ -332,7 +335,6 @@ aside {
 				&#Settings {
 
 				}
-			}
 		}
 	}
 }
