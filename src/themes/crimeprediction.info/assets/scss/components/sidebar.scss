@@ -126,7 +126,6 @@ aside {
 									padding-top: $offset-2;
 
 									> ol { // depth 3
-										//padding-top: $offset-1;
 										padding-left: $offset-1;
 
 										li { // h3
@@ -272,10 +271,6 @@ aside {
 										cursor: s-resize;
 									}
 								}
-
-								ol li {
-									display: none;
-								}
 							}
 
 							a {
@@ -310,10 +305,6 @@ aside {
 									cursor: pointer;
 									width: 22px;
 									height: 14px;
-									//margin-left: $offset-2;
-
-
-									//background-color: red;
 									background-size: cover;
 
 									&:focus {
@@ -322,10 +313,10 @@ aside {
 								}
 							}
 
-							&[data-chapter-toggled="false"] ul li{
+							&[data-chapter-toggled="false"] ol li{
 								visibility: hidden;
 							}
-							&[data-chapter-toggled="true"] ul li {
+							&[data-chapter-toggled="true"] ol li {
 									visibility: visible;
 							}
 

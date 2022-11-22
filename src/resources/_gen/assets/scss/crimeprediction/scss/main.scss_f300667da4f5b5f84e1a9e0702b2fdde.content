@@ -888,8 +888,6 @@ aside {
             background-image: url("./../icons/folder_down.png"); }
             aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="false"] .chapter_wrapper .chapter_toggle:hover {
               cursor: s-resize; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="false"] ol li {
-            display: none; }
           aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] a {
             display: block; }
           aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] div.chapter_wrapper {
@@ -917,9 +915,9 @@ aside {
               background-size: cover; }
               aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] div.chapter_wrapper button.chapter_toggle:focus {
                 outline: none; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="false"] ul li {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="false"] ol li {
             visibility: hidden; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="true"] ul li {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="true"] ol li {
             visibility: visible; }
 
 /* ~ 

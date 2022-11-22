@@ -725,113 +725,6 @@ Font names & weights
 Font sizes – expects 3 vals: small, large, very-large
 
 ~ */
-aside#toc-wrapper {
-  z-index: 6;
-  position: fixed;
-  top: 0;
-  pointer-events: auto;
-  height: 100vh;
-  border-right: 1px solid #424242;
-  background-color: #303030;
-  transition: background-color .15s; }
-  aside#toc-wrapper nav#TableOfContents {
-    position: absolute;
-    top: 0;
-    display: inline-block;
-    margin-top: 0.5em;
-    height: 100%;
-    width: 100%; }
-    aside#toc-wrapper nav#TableOfContents a {
-      text-decoration: none;
-      color: #fff;
-      font-family: "gangster-regular";
-      font-weight: 400; }
-    aside#toc-wrapper nav#TableOfContents ul {
-      padding-left: 0.5em;
-      padding-top: 1em; }
-      aside#toc-wrapper nav#TableOfContents ul li {
-        padding-bottom: 0.5em; }
-        aside#toc-wrapper nav#TableOfContents ul li a {
-          font-size: 1.25em;
-          display: block; }
-  aside#toc-wrapper button#toc-toggle {
-    position: relative;
-    text-transform: uppercase;
-    width: 40px;
-    height: 100%;
-    color: #fff;
-    white-space: pre;
-    display: inline-block;
-    background: none;
-    border: none;
-    border-right: 1px solid #2e2e2e;
-    border-left: 1px solid #424242;
-    padding: 0;
-    float: left; }
-    aside#toc-wrapper button#toc-toggle:focus {
-      outline: 0; }
-    aside#toc-wrapper button#toc-toggle span#toc-toggle-label {
-      position: absolute;
-      transform-origin: left 0;
-      transform: rotate(-90deg) translateY(-50%);
-      top: 57%;
-      left: 50%; }
-
-div#reading-progress-bar {
-  position: absolute;
-  z-index: 5;
-  z-index: 1000;
-  width: 100%;
-  height: 4px;
-  background-color: #b3b3b3; }
-
-/* ~ 
-
-offsets
-
-~ */
-/* ~ 
-
-article responsive offsets
-
-$sizes var needs 3 vals: small device, medium device, large device
-
-~ */
-/* ~ 
-
-offsets
-
-~ */
-/* ~ 
-
-article responsive offsets
-
-$sizes var needs 3 vals: small device, medium device, large device
-
-~ */
-@font-face {
-  font-family: 'gangster-regular';
-  font-style: normal;
-  src: url(./../fonts/GangsterGrotesk-Regular.otf) format("opentype"); }
-
-@font-face {
-  font-family: 'FiraMono-regular';
-  font-style: normal;
-  src: url(./../fonts/FiraMono-Regular.ttf) format("truetype"); }
-
-@font-face {
-  font-family: 'hk-gothic';
-  font-weight: bold;
-  font-style: normal;
-  src: url(./../fonts/HK-gothic.ttf) format("truetype"); }
-
-/* ~
-
-Font names & weights
-
-Font sizes – expects 3 vals: small, large, very-large
-
-~ */
 aside {
   z-index: 6;
   position: absolute;
@@ -907,94 +800,99 @@ aside {
         background-color: black;
         padding-top: 4em; }
         aside div.sidebar-wrapper .sidebar_content nav#TableOfContents a {
-          text-decoration: none; }
-        aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] {
+          text-decoration: none;
+          color: #fff;
+          font-family: "gangster-regular";
+          font-weight: 400; }
+        aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] {
           padding-bottom: 4em;
           position: relative; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter]:hover {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter]:hover {
             cursor: pointer; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] > ul {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] > ol {
             padding-top: 0.5em;
             padding-left: 2em;
             border-top: solid 1px #424242;
             height: 45px; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] > ul li {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] > ol li {
               padding-top: 1em; }
-              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] > ul li > ul {
+              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] > ol li > ol {
                 padding-left: 0.5em; }
-                aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] > ul li > ul li {
+                aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] > ol li > ol li {
                   padding-top: 0.5em; }
-                  aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] > ul li > ul li > ul {
+                  aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] > ol li > ol li > ol {
                     padding-left: 0.5em; }
-                    aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] > ul li > ul li > ul li {
+                    aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] > ol li > ol li > ol li {
                       padding-top: 0.5em; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-0[chapter] {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-0[chapter] {
             background-color: #232323; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-0[chapter] .chapter_wrapper {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-0[chapter] .chapter_wrapper {
               background-color: #232323; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-0[chapter]:hover {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-0[chapter]:hover {
               background-color: #292929; }
-              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-0[chapter]:hover .chapter_wrapper {
+              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-0[chapter]:hover .chapter_wrapper {
                 background-color: #292929; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-1[chapter] {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-1[chapter] {
             background-color: #262626; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-1[chapter] .chapter_wrapper {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-1[chapter] .chapter_wrapper {
               background-color: #262626; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-1[chapter]:hover {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-1[chapter]:hover {
               background-color: #2c2c2c; }
-              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-1[chapter]:hover .chapter_wrapper {
+              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-1[chapter]:hover .chapter_wrapper {
                 background-color: #2c2c2c; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-2[chapter] {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-2[chapter] {
             background-color: #292929; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-2[chapter] .chapter_wrapper {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-2[chapter] .chapter_wrapper {
               background-color: #292929; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-2[chapter]:hover {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-2[chapter]:hover {
               background-color: #2f2f2f; }
-              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-2[chapter]:hover .chapter_wrapper {
+              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-2[chapter]:hover .chapter_wrapper {
                 background-color: #2f2f2f; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-3[chapter] {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-3[chapter] {
             background-color: #2c2c2c; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-3[chapter] .chapter_wrapper {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-3[chapter] .chapter_wrapper {
               background-color: #2c2c2c; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-3[chapter]:hover {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-3[chapter]:hover {
               background-color: #323232; }
-              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-3[chapter]:hover .chapter_wrapper {
+              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-3[chapter]:hover .chapter_wrapper {
                 background-color: #323232; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-4[chapter] {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-4[chapter] {
             background-color: #2e2e2e; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-4[chapter] .chapter_wrapper {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-4[chapter] .chapter_wrapper {
               background-color: #2e2e2e; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-4[chapter]:hover {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-4[chapter]:hover {
               background-color: #373737; }
-              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-4[chapter]:hover .chapter_wrapper {
+              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-4[chapter]:hover .chapter_wrapper {
                 background-color: #373737; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-5[chapter] {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-5[chapter] {
             background-color: #2e2e2e; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-5[chapter] .chapter_wrapper {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-5[chapter] .chapter_wrapper {
               background-color: #2e2e2e; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-5[chapter]:hover {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-5[chapter]:hover {
               background-color: #373737; }
-              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li.ch-5[chapter]:hover .chapter_wrapper {
+              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li.ch-5[chapter]:hover .chapter_wrapper {
                 background-color: #373737; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter][data-chapter-toggled="true"] {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="true"] {
             background-color: black; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter][data-chapter-toggled="true"] .chapter_wrapper {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="true"] .chapter_wrapper {
               background-color: black; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter][data-chapter-toggled="true"]:hover {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="true"]:hover {
               background-color: black; }
-              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter][data-chapter-toggled="true"]:hover .chapter_wrapper {
+              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="true"]:hover .chapter_wrapper {
                 background-color: black; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter][data-chapter-toggled="true"] .chapter_wrapper .chapter_toggle {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="true"] .chapter_wrapper .chapter_toggle {
               background-image: url("./../icons/folder_up.png"); }
-              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter][data-chapter-toggled="true"] .chapter_wrapper .chapter_toggle:hover {
+              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="true"] .chapter_wrapper .chapter_toggle:hover {
                 cursor: n-resize; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter][data-chapter-toggled="false"] .chapter_wrapper .chapter_toggle {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="false"] .chapter_wrapper .chapter_toggle {
             background-image: url("./../icons/folder_down.png"); }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter][data-chapter-toggled="false"] .chapter_wrapper .chapter_toggle:hover {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="false"] .chapter_wrapper .chapter_toggle:hover {
               cursor: s-resize; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] a {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="false"] ol li {
+            display: none; }
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] a {
             display: block; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] div.chapter_wrapper {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] div.chapter_wrapper {
             position: absolute;
             display: inline-block;
             overflow-x: hidden;
@@ -1003,13 +901,13 @@ aside {
             border: solid 1px #424242;
             border-bottom: none;
             border-left: none; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] div.chapter_wrapper span.toc_pretitle {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] div.chapter_wrapper span.toc_pretitle {
               display: block;
               padding-bottom: 0.5em; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] div.chapter_wrapper a {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] div.chapter_wrapper a {
               display: inline-block;
               margin-right: 1em; }
-            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] div.chapter_wrapper button.chapter_toggle {
+            aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] div.chapter_wrapper button.chapter_toggle {
               display: inline-block;
               background: none;
               border: none;
@@ -1017,11 +915,11 @@ aside {
               width: 22px;
               height: 14px;
               background-size: cover; }
-              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter] div.chapter_wrapper button.chapter_toggle:focus {
+              aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] div.chapter_wrapper button.chapter_toggle:focus {
                 outline: none; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter][data-chapter-toggled="false"] ul li {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="false"] ul li {
             visibility: hidden; }
-          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents > ul li[chapter][data-chapter-toggled="true"] ul li {
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="true"] ul li {
             visibility: visible; }
 
 /* ~ 
