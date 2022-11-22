@@ -888,6 +888,8 @@ aside {
             background-image: url("./../icons/folder_down.png"); }
             aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="false"] .chapter_wrapper .chapter_toggle:hover {
               cursor: s-resize; }
+          aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter][data-chapter-toggled="false"] ol li {
+            display: none; }
           aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] a {
             display: block; }
           aside div.sidebar-wrapper .sidebar_content nav#TableOfContents ol li[chapter] div.chapter_wrapper {
